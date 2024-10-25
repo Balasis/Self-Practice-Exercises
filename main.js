@@ -178,7 +178,11 @@ function repeatFunction () {
                 default:return myDelayedGreeting ;
             }
         })();
-    executeRepeatedly(theFunctionChosen, theValueForIter);
+        //starting delay of the 1 sec
+    setTimeout(()=> {
+        executeRepeatedly(theFunctionChosen, theValueForIter);
+    },1000);
+    
 }
 
 //Its important here to have funcToRepeat() After the setTimeout
@@ -187,7 +191,7 @@ function repeatFunction () {
 //and their callbacks are also async... anyway its better to not mess
 //with it.
 function executeRepeatedly(funcToRepeat, timesToRepeat) {
-    if (timesToRepeat < 0) return;
+    if (timesToRepeat <= 0) return;
     setTimeout(() => {
         executeRepeatedly(funcToRepeat, timesToRepeat-1);                
      }, 1000);
