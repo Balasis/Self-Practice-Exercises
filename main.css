@@ -1,0 +1,107 @@
+*{
+    box-sizing: border-box;
+}
+
+html,body{
+    padding:0;
+    margin:0;
+}
+
+html{
+    height:100%;
+    width:100%;
+    overflow-x: hidden;
+    font-size: 16px; /*Ensure the default....*/
+}
+
+body{
+    min-height:100%;
+    min-width:100%;
+    display:flex;
+    flex-direction: column;
+    position:relative;
+    justify-content: center;
+    align-items: center;
+    background-color:rgb(209, 233, 241);
+    background-image: url("./aBg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+main{
+    display:flex;
+    flex-direction: column;
+    position:relative;
+    justify-content: center;
+    align-items: center;
+    width:50%;
+    background-color:rgba(3, 99, 163, 0.85);
+    border-radius: 15px 15px;
+    padding:1em;
+    color:white;   
+}
+
+
+#buttonsDiv  >*{
+    margin-bottom:1em;
+    display:flex;
+    justify-content: space-between;
+}
+
+/* in case of 2 inputs it will fix the position of the first*/
+#buttonsDiv  div input:first-of-type{
+    margin-left:auto;
+}
+
+#buttonsDiv{
+    width:80%;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+button{
+    cursor:pointer;
+    min-width:15%;
+}
+
+input{
+    width:20%;
+    min-width:5em;
+}
+
+.innerDivs{
+    display:flex;
+    width:15%;
+}
+
+p{
+    width:80%;
+    font-style: italic;
+    text-align: center;
+    margin-top:0;
+    font-size:1.5em;
+}
+
+
+@media only screen and (max-width:70em) {
+    main {
+        width:80%;
+    }
+}
+
+@media only screen and (max-width:50em) {
+    main {
+        width:90%;
+    }
+}
+
+@media only screen and (max-width:35em) {
+    main {
+        width:100%;
+        border-radius: 0px;
+    }
+    #buttonsDiv{
+        width: 100%;
+    }
+}
